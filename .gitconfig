@@ -1,0 +1,25 @@
+[alias]
+	st = status
+	cm = commit -m
+	br = branch
+	co = checkout
+	com = checkout master
+	cow = checkout working
+	pum = pull upstream master
+	pshum = push upstream master
+	a = !git add . && git add -u
+	reb = rebase master
+	df = diff
+	mt = mergetool
+	rebc = rebase --continue
+	mw = merge working
+[core]
+	autocrlf = false
+	excludesfile = c:/home/.gitignore_global
+[user]
+	name = Ryan Rauh
+	email = rauh.ryan@gmail.com
+[merge]
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = p4merge.exe \\\"$BASE\\\" \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$MERGED\\\"

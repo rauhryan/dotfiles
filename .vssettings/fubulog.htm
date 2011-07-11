@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html><head><title>FubuMVC: Full Package Loading Log</title><style>html, body{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#111;
+	line-height:1.4em;
+	background-color: #ccc;
+}
+
+a, a:visited{
+	color: #111;
+}
+
+.main{
+	-moz-background-clip:border;
+	-moz-border-radius-topleft:6px;
+	-moz-border-radius-topright:6px;
+	background-color: #fff;
+}
+
+.main > h2 {
+	-moz-background-clip:border;
+	-moz-border-radius-topleft:6px;
+	-moz-border-radius-topright:6px;
+	background-color:#EBEAEA;
+	border-color:#FAFAFA #DDDDDD #D2D2D2;
+	border-style:solid;
+	border-width:1px;
+	margin: 0;
+	padding: 10px;
+}
+
+.main > h3 {
+	padding: 10px;
+	margin: 0px;
+	background-color: #EBEAEA;
+	border-color:#FAFAFA #DDDDDD #D2D2D2;
+	border-style:solid;
+	border-width:1px;
+}
+
+.main .homelink {
+	background-color:#EBEAEA;
+	border-color:#FAFAFA #DDDDDD #D2D2D2;
+	border-style:solid;
+	border-width:1px;
+	margin: 0;
+	padding: 2px;
+	padding-left: 10px;
+}
+
+.main ul {
+	border-color:#FAFAFA #DDDDDD #D2D2D2;
+	border-style:solid;
+	border-width:1px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.main ul > li {
+}
+
+.main table > thead > tr > th{
+	padding: 8px;
+	background-color: #eee;
+}
+
+.main table > tbody > tr > td {
+	padding: 8px;
+	border-bottom: 1px dotted #d8d8d8;
+}
+
+.main table > tbody > tr:hover{
+	background-color: #c8c8c8;
+}
+
+.main-content{
+	padding: 4px 10px;
+}
+
+.convention-log li{
+	font-family: Consolas, Courier New, Courier;	
+}
+
+.behavior
+{
+	border: solid thin black;
+	margin: 20px;
+	padding: 10px;
+}
+
+.content
+{
+	overflow:scroll;
+	background-color: #dddddd;
+}
+
+
+table.details
+{
+    border: solid thin black;
+    margin-bottom: 25px;
+}
+
+table.details TR
+{
+	padding-bottom: 1px;
+	padding-top: 1px;
+}
+
+table.details > THEAD > TR
+{
+	border-bottom: solid thin black;
+}
+
+table.details TD
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+table.details TH
+{
+    BACKGROUND-COLOR: Silver;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0px;
+}
+
+.chainId
+{
+	 /* must be monospace */
+	font-family: Consolas, Courier New, Courier;
+	font-size: smaller;
+}
+
+
+.summary {
+	margin: 5px 10px;
+}
+
+#version-display{
+	float:right;
+	font-size:small;
+	font-weight:normal;
+}
+
+.fubu-internal{
+    color:#999999;
+    font-size:0.8em;
+    line-height:0.6em;
+}
+
+.fubu-internal a, .fub-internal a:visited{
+    color:#999999;
+}
+
+.main table > tbody > tr.fubu-internal:hover{
+	color: #111;
+}
+
+.route-link {
+	text-decoration: none;
+}
+
+.route-link:hover {
+	text-decoration: underline;
+}
+
+.authz-decision {
+    font-weight: bold;
+}
+
+.execution-time
+{
+	text-align:right;
+}
+
+.failure
+{
+	background-color: #FFFFAA;
+}
+
+pre.failure
+{
+	font-size:smaller;
+	overflow:scroll;
+}
+
+.log
+{
+	padding-left: 20px;
+}
+
+.script-query
+{
+	padding: 5px 2px 2px 10px;
+	background-color:White;
+	padding-top:10px;
+	padding-bottom: 20px;
+}
+
+#script-names-text
+{
+	width: 400px;
+}</style></head><body><div class="main"><h2>FubuMVC Diagnostics<span id="version-display">version: <a href="http://github.com/DarthFubuMVC/fubumvc/commit/2d32d7c022266681fa1cbd351d4108420c119f39" title="2d32d7c022266681fa1cbd351d4108420c119f39">0.9.0.51002</a></span></h2><div class="homelink"><a href="/fubu-testing/_fubu">Home</a><span> &gt; Full Package Loading Log</span></div><table><thead><tr><th>Type</th><th>Description</th><th>Provenance</th><th>Timing</th></tr></thead><tbody><tr><td>IPackageFacility</td><td>FubuMVC Packaging Facility</td><td>FubuTestApplication.Global.Application_Start(),  line 0</td><td class="execution-time">0</td></tr><tr><td>IPackageLoader</td><td>Bottles.LinkedFolderPackageLoader</td><td>FubuMVC Packaging Facility</td><td class="execution-time">154</td></tr><tr><td colspan="4"><pre class="log">Loading linked folders via the package manifest at c:\oss\fubumvc\src\FubuTestApplication\
+  - linking folder c:\oss\fubumvc\src\TestPackage1
+</pre></td></tr><tr><td>IPackageLoader</td><td>FubuMVC.Core.Packaging.ZipFilePackageLoader</td><td>FubuMVC Packaging Facility</td><td class="execution-time">186</td></tr><tr><td colspan="4"><pre class="log">Searching for zip files in package directory c:\oss\fubumvc\src\FubuTestApplication\bin\fubu-packages
+Exploded package zip file c:\oss\fubumvc\src\FubuTestApplication\bin\fubu-packages\pak4.zip to c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4
+Exploded package zip file c:\oss\fubumvc\src\FubuTestApplication\bin\fubu-packages\spark.zip to c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark
+Searching for zip files in package directory c:\oss\fubumvc\src\FubuTestApplication\fubu-content
+</pre></td></tr><tr><td>IPackageLoader</td><td>FubuMVC.Core.Packaging.StandaloneAssemblyPackageLoader</td><td>FubuMVC Packaging Facility</td><td class="execution-time">1</td></tr><tr><td>IActivator</td><td>Adding package web content folders to the virtual path provider (VirtualPathProviderActivator)</td><td>FubuMVC Packaging Facility</td><td class="execution-time">1</td></tr><tr><td>IActivator</td><td>Scan and activate image, CSS, and JavaScript content in package web content folders (PackageFolderActivator)</td><td>FubuMVC Packaging Facility</td><td class="execution-time">1</td></tr><tr><td colspan="4"><pre class="log">Added folder &#39;c:\oss\fubumvc\src\TestPackage1\content&#39; to the package folder list
+Added folder &#39;c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4\WebContent\content&#39; to the package folder list
+Added folder &#39;c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark\WebContent\content&#39; to the package folder list
+</pre></td></tr><tr><td>IBootstrapper</td><td>Lambda expression at: FubuMVC.Core.FubuApplication+&lt;&gt;c__DisplayClassc.&lt;Bootstrap&gt;b__9(),  line 0</td><td>FubuTestApplication.Global.Application_Start(),  line 0</td><td class="execution-time">907</td></tr><tr><td colspan="4"><pre class="log">Applying extension TestPackage1.TestPackage1Registry
+Applying extension TestPackage4.TestPackage4Registry
+Applying extension FubuMVC.Spark.SparkExtension
+</pre></td></tr><tr><td>IPackageInfo</td><td>pak1 (c:\oss\fubumvc\src\TestPackage1)</td><td>Loaded by Bottles.LinkedFolderPackageLoader</td><td class="execution-time">4</td></tr><tr><td colspan="4"><pre class="log">Loaded assembly TestPackage1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+</pre></td></tr><tr><td>IPackageInfo</td><td>pak4 (c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4)</td><td>Loaded by FubuMVC.Core.Packaging.ZipFilePackageLoader</td><td class="execution-time">0</td></tr><tr><td colspan="4"><pre class="log">Loaded assembly TestPackage4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+</pre></td></tr><tr><td>IPackageInfo</td><td>FubuMVC.Spark (c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark)</td><td>Loaded by FubuMVC.Core.Packaging.ZipFilePackageLoader</td><td class="execution-time">0</td></tr><tr><td colspan="4"><pre class="log">Loaded assembly FubuMVC.Spark, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null
+Loaded assembly Spark, Version=1.5.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c
+</pre></td></tr><tr><td>Assembly</td><td>TestPackage1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</td><td>Loaded from c:\oss\fubumvc\src\TestPackage1\bin\TestPackage1.dll</td><td class="execution-time">0</td></tr><tr><td>Assembly</td><td>TestPackage4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</td><td>Loaded from c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4\bin\TestPackage4.dll</td><td class="execution-time">0</td></tr><tr><td>Assembly</td><td>FubuMVC.Spark, Version=0.9.0.0, Culture=neutral, PublicKeyToken=null</td><td>Loaded from c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark\bin\FubuMVC.Spark.dll</td><td class="execution-time">0</td></tr><tr><td>Assembly</td><td>Spark, Version=1.5.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c</td><td>Loaded from c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark\bin\Spark.dll</td><td class="execution-time">0</td></tr><tr><td>Template</td><td>c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4\WebContent\Views\HelloSpark\HelloWorld.spark</td><td></td><td class="execution-time">0</td></tr><tr><td colspan="4"><pre class="log">Expected master page [Application] not found.
+View model type is : [TestPackage4.HelloWorld]
+</pre></td></tr><tr><td>Template</td><td>c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4\WebContent\Views\HelloSpark\HelloWorld.spark</td><td></td><td class="execution-time">0</td></tr><tr><td colspan="4"><pre class="log">Expected master page [Application] not found.
+View model type is : [TestPackage4.HelloWorld]
+</pre></td></tr><tr><td>IActivator</td><td>FubuMVC.Spark.SparkActivator</td><td>Loaded by Bootstrapper:  Lambda expression at: FubuMVC.Core.FubuApplication+&lt;&gt;c__DisplayClassc.&lt;Bootstrap&gt;b__9(),  line 0</td><td class="execution-time">7</td></tr><tr><td>IActivator</td><td>FubuMVC.Spark.SparkActivator</td><td>Loaded by Bootstrapper:  Lambda expression at: FubuMVC.Core.FubuApplication+&lt;&gt;c__DisplayClassc.&lt;Bootstrap&gt;b__9(),  line 0</td><td class="execution-time">0</td></tr><tr><td>IActivator</td><td>FubuMVC.Core.Packaging.PackageFileActivator</td><td>Loaded by Bootstrapper:  Lambda expression at: FubuMVC.Core.FubuApplication+&lt;&gt;c__DisplayClassc.&lt;Bootstrap&gt;b__9(),  line 0</td><td class="execution-time">1</td></tr><tr><td colspan="4"><pre class="log">Adding directory c:\oss\fubumvc\src\TestPackage1 to PackageFileCache
+Adding directory c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4\WebContent to PackageFileCache
+Adding directory c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark\WebContent to PackageFileCache
+</pre></td></tr><tr><td>IActivator</td><td>FubuMVC.Core.Content.ScriptGraphConfigurationActivator</td><td>Loaded by Bootstrapper:  Lambda expression at: FubuMVC.Core.FubuApplication+&lt;&gt;c__DisplayClassc.&lt;Bootstrap&gt;b__9(),  line 0</td><td class="execution-time">17</td></tr><tr><td colspan="4"><pre class="log">Trying to read *script.config files from c:\oss\fubumvc\src\FubuTestApplication\
+  Reading script directives from c:\oss\fubumvc\src\FubuTestApplication\main.script.config
+  Reading script directives from c:\oss\fubumvc\src\FubuTestApplication\sets.script.config
+Trying to read *script.config files from c:\oss\fubumvc\src\TestPackage1
+  Reading script directives from c:\oss\fubumvc\src\TestPackage1\pak1.script.config
+Trying to read *script.config files from c:\oss\fubumvc\src\FubuTestApplication\fubu-content\pak4\WebContent
+  No *.script.config files found
+Trying to read *script.config files from c:\oss\fubumvc\src\FubuTestApplication\fubu-content\spark\WebContent
+  No *.script.config files found
+</pre></td></tr></tbody></table></div></body></html>
