@@ -10,3 +10,6 @@
 [submodule "vimfiles/bundle/vim-liquid"]
 	path = vimfiles/bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "vimfiles/bundle/vim-matchit"]
+	path = vimfiles/bundle/vim-matchit
+	url = https://github.com/mhz/vim-matchit.git
