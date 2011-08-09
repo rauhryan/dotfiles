@@ -31,8 +31,14 @@ set showmode
 
 " Enable enhanced command-line completion. Presumes you have compiled
 " with +wildmenu.  See :help 'wildmenu'
-set wildmenu
+set wildmenu                           
 
+" Tabstops are 4 spaces
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
 
 " Let's make it easy to edit this file (mnemonic for the key sequence is
 " 'e'dit 'v'imrc)
@@ -62,7 +68,7 @@ set backspace=2
 
 " See :help 'cpoptions' for these ones.  'cpoptions' has a huge set 
 " of possible options
-" set cpoptions=ces$
+set cpoptions=ces$
 
 " Set the status line the way I like it
 set stl=%f\ %m\ %r\ Line:\ %l/%L[%p%%]\ Col:\ %c\ Buf:\ #%n\ [%b][0x%B]
@@ -159,7 +165,30 @@ noremap <silent> <C-7> <C-W>>
 noremap <silent> <C-8> <C-W>+
 noremap <silent> <C-9> <C-W>+
 noremap <silent> <C-0> <C-W>>
+
+" Search the current file for what's currently in the search register and display matches
+nmap <silent> ,gs :vimgrep /<C-r>// %<CR>:ccl<CR>:cwin<CR><C-W>J:nohls<CR>
+
+" Search the current file for the word under the cursor and display matches
+nmap <silent> ,gw :vimgrep /<C-r><C-w>/ %<CR>:ccl<CR>:cwin<CR><C-W>J:nohls<CR>
+
+" Search the current file for the WORD under the cursor and display matches
+nmap <silent> ,gW :vimgrep /<C-r><C-a>/ %<CR>:ccl<CR>:cwin<CR><C-W>J:nohls<CR>
+
+" Swap two words
+nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
  
+"-----------------------------------------------------------------------------
+" FuzzyFinder Settings
+"-----------------------------------------------------------------------------
+let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|class|meta|lock|orig|jar|swp)$|/test/data\.|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+nmap <silent> ,fv :FufFile ~/.vim/<cr>
+nmap <silent> ,fb :FufBuffer<cr>
+nmap <silent> ,ff :FufFile<cr>
+nmap <silent> ,fc :FufMruCmd<cr>
+nmap <silent> ,fm :FufMruFile<cr>
+nmap <silent> ,fp :FufFile ~/git/*<cr>
+
 "-----------------------------------------------------------------------------
 " Set up the window colors and size
 "-----------------------------------------------------------------------------
