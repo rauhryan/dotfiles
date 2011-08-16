@@ -8,4 +8,4 @@ alias shs='python -m SimpleHTTPServer'
 
 alias ls='ls --color'
 
-set -o vi
+# set -o vi

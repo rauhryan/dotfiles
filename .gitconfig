@@ -20,7 +20,7 @@
 	name = Ryan Rauh
 	email = rauh.ryan@gmail.com
 [merge]
-	tool = gvimdiff3
+	tool = p4merge
 [mergetool "p4merge"]
 	cmd = p4merge.exe \\\"$BASE\\\" \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$MERGED\\\"
 [mergetool "vimdiff3"]

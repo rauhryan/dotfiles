@@ -177,7 +177,6 @@ nmap <silent> ,gW :vimgrep /<C-r><C-a>/ %<CR>:ccl<CR>:cwin<CR><C-W>J:nohls<CR>
 
 " Swap two words
 nmap <silent> gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
- 
 "-----------------------------------------------------------------------------
 " FuzzyFinder Settings
 "-----------------------------------------------------------------------------
@@ -188,6 +187,25 @@ nmap <silent> ,ff :FufFile<cr>
 nmap <silent> ,fc :FufMruCmd<cr>
 nmap <silent> ,fm :FufMruFile<cr>
 nmap <silent> ,fp :FufFile ~/git/*<cr>
+
+
+"-----------------------------------------------------------------------------
+" NERD Tree Plugin Settings
+"-----------------------------------------------------------------------------
+" Toggle the NERD Tree on an off with F7
+nmap <F7> :NERDTreeToggle<CR>
+
+" Close the NERD Tree with Shift-F7
+nmap <S-F7> :NERDTreeClose<CR>
+
+" Show the bookmarks table on startup
+let NERDTreeShowBookmarks=1
+
+" Don't display these kinds of files
+let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
+                   \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
+                   \ '\.embed\.manifest$', '\.embed\.manifest.res$',
+                   \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
 "-----------------------------------------------------------------------------
 " Set up the window colors and size
