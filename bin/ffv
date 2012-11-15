@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find -regex ".*\.\(spark\|[mM]aster\|as[cp]x\)$" | xargs grep $@

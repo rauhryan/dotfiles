@@ -1,6 +1,10 @@
 " Who cares about vi compatibility 
 set nocompatible
 
+set shell=bash.exe
+set shellcmdflag=--login\ -c
+set shellxquote=\"
+
 
 " Run pathogen for bundled plugins
 silent! call pathogen#runtime_append_all_bundles()

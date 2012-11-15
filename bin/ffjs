@@ -1,0 +1,2 @@
+#!/bin/bash
+find -regex ".*\.js$" | grep -v ".*\.min\.js$" | grep "\(SelfService\|Web\|WebCore\)" | xargs grep $@

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+find /c/windows/Microsoft.NET/Framework64/v4.0.30319/Temporary\ ASP.NET\ Files/ -type d -maxdepth 1 | sed '1d' | while read -r d
+    do
+        echo cleaning $d
+        rm -rf $d
+    done
+
