@@ -1,29 +1,28 @@
 [alias]
-	st = status
-	cm = commit -m
-	br = branch
-	co = checkout
-	com = checkout master
-	cow = checkout working
-	pum = pull upstream master
-	pshum = push upstream master
-	a = !git add . && git add -u
-	reb = rebase master
-	df = diff
-	mt = mergetool
-	rebc = rebase --continue
-	mw = merge working
+    st = status
+    cm = commit -m
+    br = branch
+    co = checkout
+    com = checkout master
+    cow = checkout working
+    pum = pull upstream master
+    pshum = push upstream master
+    a = !git add . && git add -u
+    reb = rebase master
+    df = diff
+    mt = mergetool
+    rebc = rebase --continue
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)- %an%Creset' --abbrev-commit --date=relative   
 [core]
-	autocrlf = false
-	excludesfile = c:/home/.gitignore_global
+    autocrlf = false
+    excludesfile = c:/Users/rauhr_000/.gitignore_global
 [user]
-	name = Ryan Rauh
-	email = rauh.ryan@gmail.com
+    name = Ryan Rauh
+    email = rauh.ryan@gmail.com
 [merge]
-	tool = p4merge
-[mergetool "p4merge"]
-	cmd = p4merge.exe \\\"$BASE\\\" \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$MERGED\\\"
-[mergetool "vimdiff3"]
-	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-[mergetool "gvimdiff3"]
-	cmd = gvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    tool = bc3
+[mergetool]
+    prompt = false
+    keepBackup = false
+[mergetool "bc3"]
+    cmd = \"c:/program files (x86)/beyond compare 3/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"

@@ -1,7 +1,9 @@
-# Text Editor Files #
+# T`ext Editor Files #
 #####################
 *.swp
 *.suo
 *.ReSharper
 *.orig
 .ssh/
+*.userprefs
+scss/*.css
